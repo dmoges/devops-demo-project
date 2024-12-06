@@ -23,7 +23,7 @@ public class DemoApplication {
             podIp = InetAddress.getLocalHost().getHostAddress();
         } catch (UnknownHostException e) {
             logger.error(e.toString());
-            throw new RuntimeException(e);
+            //throw new RuntimeException(e);
         }
         logger.info("Pod IP Address: " + podIp);
 
