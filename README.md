@@ -16,6 +16,19 @@ The `demo-java-app` directory contains the source code for the Demo Java Web App
 ## Jenkins Pipeline Code
 In the `ci/Jenkins` directory, you'll find Jenkins pipeline script. These scripts automate the CI process, ensuring smooth integration of your application.
 
+    Admin account:
+    *************
+
+    user:       dmoges
+    password:   jenkinsPwd
+
+
+    SonarQube
+    *********
+
+    user:       admin
+    password:   sonar
+
 ## ArgoCD Configuration File
 Explore the `cd/argocd/argocd-basic.yaml` file to find configuration details of ArgoCD.
 
