@@ -16,6 +16,17 @@ pipeline {
         sh 'cd demo-java-app && mvn clean package'
       }
     }
+    stage('OWASP Dependency-Check Vulnerabilities') {
+      steps {
+        dependencyCheck additionalArguments: ''' 
+                    -o './'
+                    -s './'
+                    -f 'HTML' 
+                    --prettyPrint''', odcInstallation: 'OWASP Dependency-Check Vulnerabilities'
+        
+        dependencyCheckPublisher pattern: 'dependency-check-report.xml'
+      }
+    }
     stage('Static Code Analysis') {
       environment {
         SONAR_URL = "http://192.168.1.12:9000"
