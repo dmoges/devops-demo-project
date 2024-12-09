@@ -28,6 +28,7 @@ In the `ci/Jenkins` directory, you'll find Jenkins pipeline script. These script
 
     user:       admin
     password:   sonar
+    
 
 ## ArgoCD Configuration File
 Explore the `cd/argocd/argocd-basic.yaml` file to find configuration details of ArgoCD.
